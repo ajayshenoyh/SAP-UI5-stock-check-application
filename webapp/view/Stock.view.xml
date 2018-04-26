@@ -1,0 +1,20 @@
+<mvc:View controllerName="sap.ui.stockStockCheck.controller.Stock" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:viz="sap.viz.ui5.controls">
+	<Panel headerText="{i18n>PanelTitle}" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<Input value="{/stock/name}" id="stext" placeholder="Ex: SAP" valueLiveUpdate="true" width="70%"/>
+			<Button text="{i18n>showStockText}" press="onStockCheck" class="myAppDemoWT myCustomButton"/>
+		</content>
+	</Panel>
+	<Panel xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" headerText="{i18n>Panel2Title}" class="sapUiResponsiveMargin" width="auto" id="__panel2">
+		<content>
+		
+			<List id="list" visible="false"/>
+		</content>
+	</Panel>
+	<Panel xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" headerText="{i18n>Panel3Title}" class="sapUiResponsiveMargin" width="auto"
+		id="__panel2_copy">
+		
+			<viz:VizFrame xmlns="sap.viz" visible="false" id="idcolumn" vizProperties="{ title: {text : 'Your Title', visible : false}}"  width="100%"></viz:VizFrame>
+	</Panel>
+</mvc:View>
